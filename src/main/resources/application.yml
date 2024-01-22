@@ -1,0 +1,21 @@
+management:
+  endpoints:
+    jmx:
+      exposure:
+        include: "health,info"
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+  info:
+    java:
+      enabled: true
+    os:
+      enabled: true
+  server:
+    port: 9292
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
